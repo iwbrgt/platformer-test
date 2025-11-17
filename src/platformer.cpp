@@ -36,7 +36,6 @@ int main() {
   
     
 
-
     //make a test window
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "platformer test", NULL, NULL);
     if (window == NULL)
@@ -141,8 +140,7 @@ int main() {
 
     //setup textures
     ourShader.use(); // don't forget to activate the shader before setting uniforms!  
-    glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0); // set it manually
-    ourShader.setInt("texture2", 1); // or with shader class
+    glUniform1i(glGetUniformLocation(ourShader.ID, "spritesheet"), 0); // set it manually
 
     //render loop
     while(!glfwWindowShouldClose(window)) {
